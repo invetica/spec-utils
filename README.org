@@ -13,7 +13,11 @@
  - [[#license][License]]
 
 * Installation
-Available via Clojars. Project badge coming soon!
+#+BEGIN_HTML
+<a href="https://clojars.org/invetica/spec">
+  <img src="https://img.shields.io/clojars/v/invetica/spec.svg"></img>
+</a>
+#+END_HTML
 
 * Usage
 #+begin_src clojure
