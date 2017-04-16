@@ -5,19 +5,15 @@
 <a href="https://circleci.com/gh/invetica/spec-utils">
   <img src="https://circleci.com/gh/invetica/spec-utils.svg"></img>
 </a>
-#+END_HTML
 
-* Contents                                                              :TOC:
- - [[#installation][Installation]]
- - [[#usage][Usage]]
- - [[#license][License]]
-
-* Installation
-#+BEGIN_HTML
 <a href="https://clojars.org/invetica/spec">
   <img src="https://img.shields.io/clojars/v/invetica/spec.svg"></img>
 </a>
 #+END_HTML
+
+* Contents                                                              :TOC:
+ - [[#usage][Usage]]
+ - [[#license][License]]
 
 * Usage
 #+begin_src clojure
