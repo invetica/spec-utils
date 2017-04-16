@@ -1,4 +1,4 @@
-(defproject invetica/spec "0.1.0"
+(defproject invetica/spec "0.2.0-SNAPSHOT"
   :description "Utilities for working with clojure.spec."
   :url "https://github.com/invetica/spec"
   :license {:name "Eclipse Public License"
