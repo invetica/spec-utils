@@ -1,10 +1,19 @@
+*Spec Utils* contains a small number of functions that are useful when using
+[[https://clojure.org/about/spec][clojure.spec]].
+
+#+BEGIN_HTML
+<a href="https://circleci.com/gh/invetica/spec-utils">
+  <img src="https://circleci.com/gh/invetica/spec-utils.svg"></img>
+</a>
+
+<a href="https://clojars.org/invetica/spec">
+  <img src="https://img.shields.io/clojars/v/invetica/spec.svg"></img>
+</a>
+#+END_HTML
+
 * Contents                                                              :TOC:
- - [[#installation][Installation]]
  - [[#usage][Usage]]
  - [[#license][License]]
-
-* Installation
-Available via Clojars. Project badge coming soon!
 
 * Usage
 #+begin_src clojure
