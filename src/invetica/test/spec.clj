@@ -2,7 +2,7 @@
   "Useful test functions/macros for working with clojure.spec."
   (:require
    [clojure.pprint :refer [pprint]]
-   [clojure.spec.test :as stest]
+   [clojure.spec.test.alpha :as stest]
    ;; Do not remove the `clojure.test.check` require or Cider will break!
    ;;
    ;; See https://github.com/clojure-emacs/cider/issues/1841.

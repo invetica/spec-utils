@@ -3,7 +3,7 @@
   :url "https://github.com/invetica/spec"
   :license {:name "The MIT License"
             :url "http://opensource.org/licenses/MIT"}
-  :dependencies [[org.clojure/clojure "1.9.0-alpha15"]
+  :dependencies [[org.clojure/clojure "1.9.0-alpha16"]
                  [org.clojure/test.check "0.9.0" :scope "provided"]]
   :aliases {"lint" ["do" ["whitespace-linter"] ["eastwood"]]}
   :profiles
