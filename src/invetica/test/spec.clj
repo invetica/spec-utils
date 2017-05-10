@@ -1,12 +1,13 @@
 (ns invetica.test.spec
-  (:require [clojure.spec.test :as stest]
-            [clojure.pprint :refer [pprint]]
-            ;; Do not remove the `clojure.test.check` require or Cider will
-            ;; break!
-            ;;
-            ;; See https://github.com/clojure-emacs/cider/issues/1841.
-            clojure.test.check
-            [clojure.test :refer [is]]))
+  "Useful test functions/macros for working with clojure.spec."
+  (:require
+   [clojure.pprint :refer [pprint]]
+   [clojure.spec.test.alpha :as stest]
+   ;; Do not remove the `clojure.test.check` require or Cider will break!
+   ;;
+   ;; See https://github.com/clojure-emacs/cider/issues/1841.
+   [clojure.test.check]
+   [clojure.test :refer [is]]))
 
 (defn instrument
   "Convenience function compatible with `clojure.test/use-fixtures`, that will
