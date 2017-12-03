@@ -47,6 +47,38 @@
   checking of assertions and instrumentation of functions."
   (t/join-fixtures [check-asserts instrument]))
 
+;; -----------------------------------------------------------------------------
+;; Test helpers
+
+(defmethod t/assert-expr 'conforming?
+  [msg form]
+  (let [args (rest form)]
+    (assert (<= 2 (count args) 3))
+    `(let [result# (s/valid? ~@args)]
+       (if result#
+         (t/do-report {:actual '~form
+                       :expected '~form
+                       :message ~msg
+                       :type :pass})
+         (t/do-report {:actual (::s/problems (s/explain-data ~@args))
+                       :expected '~form
+                       :message ~msg
+                       :type :fail})))))
+
+(defmethod t/assert-expr 'well-specified?
+  [msg form]
+  (let [ns (nth form 1)]
+    `(let [result# (stest/check (stest/enumerate-namespace ~ns))]
+       (if (-> result# :failure nil?)
+         (t/do-report {:actual '~form
+                       :expected '~form
+                       :message ~msg
+                       :type :pass})
+         (t/do-report {:actual result#
+                       :expected '~form
+                       :message ~msg
+                       :type :fail})))))
+
 (defn is-well-specified
   "Checks all of the vars in namespace `ns`, and pretty prints any failures."
   [ns]
