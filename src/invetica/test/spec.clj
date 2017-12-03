@@ -28,5 +28,4 @@
   [ns]
   (doseq [result (stest/check (stest/enumerate-namespace ns))]
     (is (-> result :failure nil?)
-        (with-out-str
-          (pprint (stest/abbrev-result result))))))
+        (with-out-str (pprint result)))))
